@@ -16,7 +16,7 @@ import Set from "../components/set.js"
 
 
 const DiceRoller = () => {
-  let rollers = ['d4','d6','d8','d10','d12','d20' ]
+  let rollers = [4,6,8,10,12,20 ]
 
   return (
   <Layout>
@@ -26,22 +26,10 @@ const DiceRoller = () => {
     <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
       <Set 
       dice = {rollers}
-      mod = {20}
+      mod = {12}
       title = {'My Dice Set'}
+      active = {false}
       />
-
-      {/* <div class = 'set'>
-        <D4 />
-        <D6 />
-        <D8 />
-        <D10 />
-        <D12 />
-        <D20 />
-        
-        <Mod val={'-5'} />
-      </div> */}
-
-
 
     </div>
   </Layout>
