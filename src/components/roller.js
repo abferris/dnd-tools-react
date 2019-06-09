@@ -18,7 +18,8 @@ const Roller = (props) => {
   
   return (
     <div class='field'>
-    <button onClick={props.handleClick(props.dice,props.mod)}> Roll </button>
+    {/* <button onClick={props.handleClick(props.dice,props.mod)}> Roll </button> */}
+    <button>Roll</button>
     <span> {props.roll} </span>
   </div>
   )

@@ -1,9 +1,11 @@
 import React from "react"
+import { Provider } from 'react-redux'
 import { Link } from "gatsby"
 import './diceroller.css'
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import store from "../store/"
 import SEO from "../components/seo"
 // import D4 from "../components/dice/d4"
 // import D6 from "../components/dice/d6"
@@ -19,20 +21,21 @@ const DiceRoller = () => {
   let rollers = [4,6,8,10,12,20 ]
 
   return (
-  <Layout>
-    <SEO title="DiceRoller" />
-    <h1>Dice Roller</h1>
-   
-    <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
-      <Set 
-      dice = {rollers}
-      mod = {12}
-      title = {'My Dice Set'}
-      active = {false}
-      />
-
-    </div>
-  </Layout>
+  <Provider store ={store}>
+    <Layout>
+      <SEO title="DiceRoller" />
+      <h1>Dice Roller</h1>
+    
+      <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
+        <Set 
+        dice = {rollers}
+        mod = {12}
+        title = {'My Dice Set'}
+        active = {false}
+        />
+      </div>
+    </Layout>
+  </Provider>
   
 )}
 
