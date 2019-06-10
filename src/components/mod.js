@@ -9,10 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 
-function Mod({ val }) {
+function Mod({ val,type }) {
 
   return (
     <div class='field mod'>
+      <h2>{type} </h2>
       {val}
     </div>
   )
