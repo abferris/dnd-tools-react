@@ -1,9 +1,9 @@
-const initialState = {}
+const initialState = {dice: [4,6,8,10,12,20]}
 
 export default (state = initialState, action) => {
   const { data, type } = action
   switch (type) {
-    case 'PULL_USERS':
+    case 'Roll':
       return data
     default:
       return state

@@ -18,7 +18,6 @@ import Set from "../components/set.js"
 
 
 const DiceRoller = () => {
-  let rollers = [4,6,8,10,12,20 ]
 
   return (
   <Provider store ={store}>
@@ -26,14 +25,19 @@ const DiceRoller = () => {
       <SEO title="DiceRoller" />
       <h1>Dice Roller</h1>
     
+        {
+          state.store.dice.forEach((set)=>{
+          return(
       <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
-        <Set 
-        dice = {rollers}
-        mod = {12}
-        title = {'My Dice Set'}
-        active = {false}
-        />
+          <Set 
+          dice = {set.dice}
+          mod = {set.mod}
+          title = {set.title}
+          />
       </div>
+          )
+
+        })}
     </Layout>
   </Provider>
   
