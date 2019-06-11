@@ -7,14 +7,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import store from "../store/"
 import SEO from "../components/seo"
-// import D4 from "../components/dice/d4"
-// import D6 from "../components/dice/d6"
-// import D8 from "../components/dice/d8"
-// import D10 from "../components/dice/d10"
-// import D12 from "../components/dice/d12"
-// import D20 from "../components/dice/d20"
-// import Mod from "../components/mod.js"
-import Set from "../components/set.js"
+import Set from "../components/diceroller/set.js/index.js.js"
 
 
 const DiceRoller = () => {
@@ -33,6 +26,7 @@ const DiceRoller = () => {
           dice = {set.dice}
           mod = {set.mod}
           title = {set.title}
+          roll = {set.roll}
           />
       </div>
           )
